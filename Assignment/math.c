@@ -1,4 +1,7 @@
-# * Written By: Brian Harlow
+#include "math.h"
+
+/*NOTES:
+ * Written By: Brian Harlow
  * Date: 09/10/2018
  * Function Operations:
  * + Add (num1 + num2)
@@ -23,3 +26,35 @@
  *
  * The character variable Operator will only accept the following characters: +, -, *, /, %, <, >, &, |, ^, and ~. Any other input will yield a return of 0.
  *
+ *  */
+
+int math(int num1, int num2, char Operator)
+{
+    switch(Operator)
+    {
+    case '+':                   // Addition Case
+        return num1 + num2;
+    case '-':                   // Subtraction Case
+        return num1 - num2;
+    case '*':                   // Multiplication Case
+        return num1 * num2;
+    case '/':                   // Division Case
+        return num1 / num2;
+    case '%':                   // Modulus Case
+        return num1 % num2;
+    case '<':                   // Bit Shift Left Case
+        return num1 << num2;
+    case '>':                   // Bit Shift Right Case
+        return num1 >> num2;
+    case '&':                   // Bitwise AND Case
+        return num1 & num2;
+    case '|':                   // Bitwise OR Case
+        return num1 | num2;
+    case '^':                   // Bitwise XOR Case
+        return num1 ^ num2;
+    case '~':                   // Bitwise Inverse Case
+        return ~num1;
+    default:
+        return 0;
+    }
+}
